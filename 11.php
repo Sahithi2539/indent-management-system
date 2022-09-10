@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8</title>
+    <title>11</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -30,10 +30,10 @@
         <div class="row">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">ONGOING</a>
+                  <a class="nav-link" href="8.php">ONGOING</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="11.php">COMPLETED</a>
+                  <a class="nav-link active" aria-current="page" href="10.html">COMPLETED</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="12.html">TO BE APPROVED BY ME</a>
@@ -46,8 +46,8 @@
                 a,a:hover{
                   color: black;
                 }
-              </style> 
-               <thead>
+              </style>  
+              <thead>
                   <tr style="background-color: #4472c4; color:white;">
                     <th scope="col">S.No.</th>
                     <th scope="col">ID </th>
@@ -55,24 +55,22 @@
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Age</th>
                   </tr>
                 </thead>
                 <tbody>
                   <!-- <tr>
                     <th scope="row">1</th>
-                    <td>VIITNELE01</td>
+                    <td><a href="">VIITNELE01</a></td>
                     <td>VIIT</td>
                     <td>Electrical</td>
                     <td>New</td>
-                    <td><a href="10.html">HoD</a></td>
-                    <td>1 day</td>
-              </tr>
-             -->
-                  <?php
+                    <td>Approved</td>
+                  </tr> -->
+                  <tr>
+                    <?php
                       include("connection.php");
                       session_start();
-                      $sql = "SELECT id,uniqueid,Institute,Type,Category,Status,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
+                      $sql = "SELECT * FROM indentdb";
                       $result = $con->query($sql);
 
                       if (!$result) {
@@ -91,6 +89,7 @@
                         </tr>";
                       }
                       ?>
+                  </tr>
                 </tbody>
               </table>
         </div>

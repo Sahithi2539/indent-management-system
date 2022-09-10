@@ -35,19 +35,19 @@ include('details-insert.php');
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Institute</span>
-          <input type="text" class="form-control"  aria-describedby="basic-addon1" readonly>
+          <input type="text" class="form-control" value="<?php  echo "$var1"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Category</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" readonly>
+          <input type="text" class="form-control" value="<?php  echo "$var2"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Type</span>
-          <input type="text" class="form-control" value="New" aria-describedby="basic-addon1" readonly>
+          <input type="text" class="form-control" value="<?php  echo "$var3"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@ include('details-insert.php');
             Ticket ID: VIITNELE01
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="3.html">OK</a></button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="3.php">OK</a></button>
           </div>
         </div>
       </div>

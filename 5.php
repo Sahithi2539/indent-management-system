@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('database.php');
-include('details-insert.php');
+include('detail-insert.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,11 @@ include('details-insert.php');
 </head>
 
 <body>
+<?php
+    $var1 = $_SESSION['Institute'];
+    $var2 = $_SESSION['Category'];
+    $var3 = $_SESSION['Type'];
+    ?>
   <div class="container" style="margin: 100px auto;">
     <div class="row">
       <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
@@ -26,28 +31,24 @@ include('details-insert.php');
     <div class="row">
       <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome,<?php echo ($_SESSION['username']); ?> </p>
     </div>
-    <?php
-    $var1 = $_SESSION['Institute'];
-    $var2 = $_SESSION['Category'];
-    $var3 = $_SESSION['Type'];
-    ?>
+    <form action="" method="POST" id="form-indent">
     <div class="row text-center">
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Institute</span>
-          <input type="text" class="form-control" value="<?php  echo "$var1"?>" aria-describedby="basic-addon1" readonly>
+          <input type="text" name="Institute" class="form-control" value="<?php  echo "$var1"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Category</span>
-          <input type="text" class="form-control" value="<?php  echo "$var2"?>" aria-describedby="basic-addon1" readonly>
+          <input type="text" name="Category" class="form-control" value="<?php  echo "$var2"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Type</span>
-          <input type="text" class="form-control" value="<?php  echo "$var3"?>" aria-describedby="basic-addon1" readonly>
+          <input type="text" name="Type" class="form-control" value="<?php  echo "$var3"?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
     </div>
@@ -64,7 +65,7 @@ include('details-insert.php');
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Room No</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" required>
+          <input type="text" name = "RoomNo" class="form-control" aria-describedby="basic-addon1" required>
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Department</span>
@@ -90,11 +91,16 @@ include('details-insert.php');
     </div>
     <div class="row">
       <div class="col-md-12">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary align-text-bottom" style="margin-top: 50px; float:right;">SUBMIT</button>
+        <button type="submit" name="submit" class="btn btn-primary align-text-bottom" style="margin-top: 50px; float:right;">SUBMIT</button>
       </div>
     </div>
+    </form>
+
+
+
+    
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body text-center">
@@ -107,7 +113,7 @@ include('details-insert.php');
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </body>
 

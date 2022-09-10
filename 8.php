@@ -1,3 +1,9 @@
+<?php
+include("connection.php");
+include("details-insert.php");
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +31,7 @@
             <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
         </div>
         <div class="row">
-            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, srikantn</p>
+            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo ($_SESSION['username']); ?></p>
         </div>
         <div class="row">
             <ul class="nav nav-tabs">
@@ -36,7 +42,7 @@
                   <a class="nav-link" href="11.php">COMPLETED</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="12.html">TO BE APPROVED BY ME</a>
+                  <a class="nav-link" href="12.php">TO BE APPROVED BY ME</a>
                 </li>
               </ul>
         </div>
@@ -71,7 +77,6 @@
              -->
                   <?php
                       include("connection.php");
-                      session_start();
                       $sql = "SELECT id,uniqueid,Institute,Type,Category,Status,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
                       $result = $con->query($sql);
 

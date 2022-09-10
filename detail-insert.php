@@ -1,6 +1,5 @@
 <?php 
-include('database.php');
-include("connection.php");
+
 if(isset($_POST['submit'])){
   $Block = $_POST['Block'];
   $RoomNo = $_POST['RoomNo'];
@@ -9,19 +8,19 @@ if(isset($_POST['submit'])){
   $Institute = $_POST['Institute'];
   $Type=$_POST['Type'];
   $Category=$_POST['Category'];
-  $Status = $_POST['Status'];
+  $Status=$_POST['Status'];
      if(!empty($Block) && !empty($RoomNo ) && !empty($Department) && !empty($Description)){
       $query = 
-      "INSERT INTO indentdb (Institute,Type,Category,Block,RoomNo,Department,Description,status,uniqueid) 
+      "INSERT INTO indentdb(Institute,Type,Category,Block,RoomNo,Department,status,Description,uniqueid) 
       VALUES('$Institute',
              '$Type',
              '$Category',
              '$Block', 
              '$RoomNo',
              '$Department',
-             '$Description',
              '$Status',
-              upper(concat(substring('$Institute',1,4),substring('$Type',1,1),substring('$Category',1,3)))
+             '$Description',
+             concat('$Block',' ','$RoomNo')
              )";
 
 

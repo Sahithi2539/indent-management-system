@@ -55,26 +55,36 @@ include('details-insert.php');
     <div class="row text-center">
       <div class="col-md-6">
         <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Block</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">Block</span>
+            <select class="form-select" id="inputGroupSelect01"name="Block" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Room No</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" aria-describedby="basic-addon1" required>
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Department</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1">
+          <select class="form-select" id="inputGroupSelect01"name="Department" required>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+          </select>
         </div>
-        <div class="input-group mb-3">
+        <!-- <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">HoD</span>
           <input type="text" class="form-control" aria-describedby="basic-addon1">
-        </div>
+        </div> -->
       </div>
       <div class="col-md-6">
         <div class="input-group">
           <span class="input-group-text">Description</span>
-          <textarea class="form-control" style="height: 200px;" aria-label="With textarea"></textarea>
+          <textarea class="form-control" name="Description" style="height: 200px;" aria-label="With textarea" required></textarea>
         </div>
       </div>
     </div>

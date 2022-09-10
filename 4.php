@@ -32,8 +32,7 @@ session_start();
                 <div class="col-md-4">
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Institute:</label>
-                        <select class="form-select" id="inputGroupSelect01" name="Institute">
-                            <option selected></option>
+                        <select class="form-select" id="inputGroupSelect01" name="Institute" required>
                             <option value="VIIT">VIIT</option>
                             <option value="VIEW">VIEW</option>
                             <option value="VIPT">VIPT</option>
@@ -46,8 +45,7 @@ session_start();
                 <div class="col-md-4">
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Category:</label>
-                        <select class="form-select" id="inputGroupSelect01"name="Category">
-                            <option selected></option>
+                        <select class="form-select" id="inputGroupSelect01"name="Category" required>
                             <option value="Electrical">Electrical</option>
                             <option value="Carpentry">Carpentry</option>
                             <option value="Hardware">Hardware</option>
@@ -60,8 +58,7 @@ session_start();
                 <div class="col-md-4">
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Type:</label>
-                        <select class="form-select" id="inputGroupSelect01" name="Type">
-                            <option selected></option>
+                        <select class="form-select" id="inputGroupSelect01" name="Type" required>
                             <option value="New">New</option>
                             <option value="Repair">Repair</option>
                             <option value="Removal">Removal</option>
@@ -71,7 +68,7 @@ session_start();
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" value="submit" class="btn btn-primary align-text-bottom" style="margin-top: 170px; float:right;" name = "submit" />SUBMIT</button>
+                    <button type="submit" value="submit" class="btn btn-primary align-text-bottom" style="margin-top: 170px; float:right;" name = "submit">SUBMIT</button>
                 </div>
             </div>
         </form>

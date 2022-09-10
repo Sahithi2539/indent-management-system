@@ -23,7 +23,7 @@ session_start();
             <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo($_SESSION['username'] ); ?></p>
         </div>
         <div class="row" style="justify-content: space-evenly;">
-            <button type="button" style="width: auto;" class="btn btn-primary"><a href="8.html">MY INDENTS</a></button>
+            <button type="button" style="width: auto;" class="btn btn-primary"><a href="8.php">MY INDENTS</a></button>
             <button type="button" style="width: auto;" class="btn btn-primary"><a href="4.php">RAISE AN INDENT</a></button>
         </div>
     </div>

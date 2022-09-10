@@ -8,15 +8,17 @@ if(isset($_POST['submit'])){
   $Institute = $_POST['Institute'];
   $Type=$_POST['Type'];
   $Category=$_POST['Category'];
+  $Status=$_POST['Status'];
      if(!empty($Block) && !empty($RoomNo ) && !empty($Department) && !empty($Description)){
       $query = 
-      "INSERT INTO indentdb(Institute,Type,Category,Block,RoomNo,Department,Description,uniqueid) 
+      "INSERT INTO indentdb(Institute,Type,Category,Block,RoomNo,Department,status,Description,uniqueid) 
       VALUES('$Institute',
              '$Type',
              '$Category',
              '$Block', 
              '$RoomNo',
              '$Department',
+             '$Status',
              '$Description',
              concat('$Block',' ','$RoomNo')
              )";
@@ -32,6 +34,7 @@ if(isset($_POST['submit'])){
         $_SESSION['Institute']=$Institute;
         $_SESSION['Category']=$Category;
         $_SESSION['Type']=$Type;
+        $_SESSION['Status']=$Status;
         header("location:3.php");
       }  
     }

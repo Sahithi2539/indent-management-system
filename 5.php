@@ -77,10 +77,10 @@ include('detail-insert.php');
                 <option value="MECH">MECH</option>
           </select>
         </div>
-        <!-- <div class="input-group mb-3">
+        <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">HoD</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1">
-        </div> -->
+          <input type="text" name="Status" class="form-control" aria-describedby="basic-addon1" required>
+        </div>
       </div>
       <div class="col-md-6">
         <div class="input-group">

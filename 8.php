@@ -87,7 +87,7 @@ session_start();
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
-                          <td>" . $row["uniqueid"] . "</td>
+                          <td><a href='10.php'>" . $row["uniqueid"] . "</a></td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>

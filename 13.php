@@ -80,7 +80,7 @@ session_start();
                   <tr>
                     <?php
                       include("connection.php");
-                      $sql = "SELECT * FROM indentdb";
+                      $sql = "SELECT * FROM indentdb JOIN indents on indentdb.id = indents.ID";
                       $result = $con->query($sql);
 
                       if (!$result) {
@@ -90,7 +90,7 @@ session_start();
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
-                          <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>
+                          <td><a href= '13.php'>" . $row["uniqueID"] . "</a></td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>

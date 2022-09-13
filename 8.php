@@ -1,9 +1,6 @@
 <?php
-include("connection.php");
-include("details-insert.php");
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +28,7 @@ session_start();
             <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
         </div>
         <div class="row">
-            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo ($_SESSION['username']); ?></p>
+            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome,  <?php echo ($_SESSION['username']); ?></p>
         </div>
         <div class="row">
             <ul class="nav nav-tabs">
@@ -77,8 +74,11 @@ session_start();
              -->
                   <?php
                       include("connection.php");
-                      $sql = "SELECT id,uniqueid,Institute,Type,Category,Status,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
+                      include("database.php");
+                      $sql = "SELECT id,concat(uniqueid,id) as uniqueid,Institute,Type,Category,Status,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
                       $result = $con->query($sql);
+                      $value1 = "INSERT INTO indents SELECT id,concat(uniqueid,id) as uniqueid,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
+                      $result2 = $conn->query($value1);
 
                       if (!$result) {
                         die("Invalid query: " . $connection->error);
@@ -86,8 +86,8 @@ session_start();
 
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                          <td>" . $row["id"] . "</td>
-                          <td><a href='10.php'>" . $row["uniqueid"] . "</a></td>
+                          <td><a href= '3.php'>" . $row["id"] . "</a></td>
+                          <td>" . $row["uniqueid"] . "</td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>
@@ -95,6 +95,8 @@ session_start();
                           <td>" . $row["age"] . "</td>
                         </tr>";
                       }
+
+              
                       ?>
                 </tbody>
               </table>

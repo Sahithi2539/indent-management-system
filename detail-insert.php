@@ -10,6 +10,8 @@ if(isset($_POST['submit'])){
   $Type=$_POST['Type'];
   $Category=$_POST['Category'];
   $Status = $_POST['Status'];
+
+     if($Institute == "VVL DVD"){$Institute = "VVLDVD";}elseif($Institute =="VVL TMP"){$Institute= "VVLTMP";}else{$Institute = $Institute;}
      if(!empty($Block) && !empty($RoomNo ) && !empty($Department) && !empty($Description)){
       $query = 
       "INSERT INTO indentdb (Institute,Type,Category,Block,RoomNo,Department,Description,status,uniqueid) 
@@ -22,9 +24,7 @@ if(isset($_POST['submit'])){
              '$Description',
              '$Status',
               upper(concat(substring('$Institute',1,4),substring('$Type',1,1),substring('$Category',1,3)))
-             )";
-
-
+            )";
       $result = $conn->query($query);
      
       if($result){

@@ -1,6 +1,4 @@
 <?php
-include("connection.php");
-include("details-insert.php");
 session_start();
 ?>
 <!DOCTYPE html>
@@ -30,7 +28,7 @@ session_start();
             <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
         </div>
         <div class="row">
-            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo ($_SESSION['username']); ?></p>
+            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome,  <?php echo ($_SESSION['username']); ?></p>
         </div>
         <div class="row">
             <ul class="nav nav-tabs">

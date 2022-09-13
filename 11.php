@@ -1,9 +1,3 @@
-<?php
-include("connection.php");
-include("details-insert.php");
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +25,7 @@ session_start();
             <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
         </div>
         <div class="row">
-            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo ($_SESSION['username']); ?></p>
+            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, srikantn</p>
         </div>
         <div class="row">
             <ul class="nav nav-tabs">
@@ -42,7 +36,7 @@ session_start();
                   <a class="nav-link active" aria-current="page" href="10.html">COMPLETED</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="12.php">TO BE APPROVED BY ME</a>
+                  <a class="nav-link" href="12.html">TO BE APPROVED BY ME</a>
                 </li>
               </ul>
         </div>
@@ -75,6 +69,7 @@ session_start();
                   <tr>
                     <?php
                       include("connection.php");
+                      session_start();
                       $sql = "SELECT * FROM indentdb";
                       $result = $con->query($sql);
 
@@ -84,12 +79,13 @@ session_start();
 
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                          <td>" . $row["id"] . "</td>
+                          <td><a href= ''>" . $row["id"] . "</a></td>
                           <td>" . $row["uniqueid"] . "</td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>
-                          <td> APPROVED </td>
+                          <td>" . $row["Status"] . "</td>
+                          <td>approved</td>
                         </tr>";
                       }
                       ?>

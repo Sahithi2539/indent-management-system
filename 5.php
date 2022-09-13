@@ -36,7 +36,7 @@ include('detail-insert.php');
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Institute</span>
-          <input type="text" name="Institute" class="form-control" value="<?php  echo "$var1"?>" aria-describedby="basic-addon1" readonly>
+          <input type="text" name="Institute" class="form-control" value="<?php  if($var1 == "VVLDVD"){echo "VVL DVD";}elseif($var1 =="VVLTMP"){echo "VVL TMP";}else{echo "$var1";} ?>" aria-describedby="basic-addon1" readonly>
         </div>
       </div>
       <div class="col-md-4">

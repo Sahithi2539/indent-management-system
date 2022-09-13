@@ -36,9 +36,8 @@ session_start();
                             <option value="VIIT">VIIT</option>
                             <option value="VIEW">VIEW</option>
                             <option value="VIPT">VIPT</option>
-                            <option value="VVL DVD">VVL DVD</option>
-                            <option value="VVL TMP">VVL TMP</option>
-                            <option value="TRANSPORT">TRANSPORT</option>
+                            <option value="VVLDVD">VVL DVD</option>
+                            <option value="VVLTMP">VVL TMP</option>
                         </select>
                     </div>
                 </div>
@@ -52,6 +51,7 @@ session_start();
                             <option value="Software">Software</option>
                             <option value="Plumbing">Plumbing</option>
                             <option value="Civil">Civil</option>
+                            <option value="Transport">Transport</option>
                         </select>
                     </div>
                 </div>

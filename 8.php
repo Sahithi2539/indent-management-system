@@ -88,8 +88,8 @@ session_start();
 
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                          <td><a href= '3.php'>" . $row["id"] . "</a></td>
-                          <td>" . $row["uniqueid"] . "</td>
+                          <td>" . $row["id"] . "</td>
+                          <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>

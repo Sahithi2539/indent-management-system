@@ -54,87 +54,55 @@ session_start();
               </style> 
               <thead>
                   <tr style="background-color: #4472c4; color:white;">
+                    <th scope="col">S.No </th>
                     <th scope="col">ID </th>
                     <th scope="col">Institute</th>
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Owner</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Remarks</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <!-- <tr>
                     
                     <td><a href="">VIITNELE01</a></td>
                     <td>VIIT</td>
                     <td>Electrical</td>
                     <td>Repair</td>
                     <td>HoD</td>
-                    <td>1 day</td>
                     <td>Approved</td>
                     <td>
                         <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">APPROVE</button>
                         <button type="button" class="btn btn-danger btn-sm">DECLINE</button>
                     </td>
-                  </tr>
+                  </tr> -->
                   <tr>
-                    
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Dean</td>
-                    <td>2 day</td>
-                    <td>Approved</td>
-                    <td>-</td>
+                    <?php
+                      include("connection.php");
+                      $sql = "SELECT * FROM indentdb";
+                      $result = $con->query($sql);
+
+                      if (!$result) {
+                        die("Invalid query: " . $connection->error);
+                      }
+
+                      while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                          <td>" . $row["id"] . "</td>
+                          <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>
+                          <td>" . $row["Institute"] . "</td>
+                          <td>" . $row["Type"] . "</td>
+                          <td>" . $row["Category"] . "</td>
+                          <td>" . $row["Description"] . "</td>
+                          <td>
+                          <button type='button' class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#exampleModal'>APPROVE</button>
+                          <button type='button' class='btn btn-danger btn-sm'>DECLINE</button>
+                          </td>
+                        </tr>";
+                      }
+                      ?>
                   </tr>
-                  <tr>
-                    
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>DoA</td>
-                    <td>3 day</td>
-                    <td>Approved</td>
-                    <td>OK</td>
-                  </tr>
-                  <tr>
-                    
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Principal</td>
-                    <td>3 day</td>
-                    <td>Approved</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Purchase</td>
-                    <td>5 day</td>
-                    <td>Pending</td>
-                    <td>To be procured</td>
-                  </tr>
-                  <tr>
-                    
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Rector</td>
-                    <td>4 day</td>
-                    <td>Approved</td>
-                    <td>-</td>
-                  </tr>
-                 
                 </tbody>
               </table>
         </div>

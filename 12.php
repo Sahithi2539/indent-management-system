@@ -58,7 +58,6 @@ session_start();
                   <tr style="background-color: #4472c4; color:white;">
                     <th scope="col">S.No.</th>
                     <th scope="col">ID </th>
-                    <th scope="col">Institute</th>
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
                     <th scope="col">Age</th>

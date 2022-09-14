@@ -57,7 +57,6 @@ session_start();
                     <th scope="col">Institute</th>
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Status</th>
                     <th scope="col">Age</th>
                   </tr>
                 </thead>
@@ -75,7 +74,7 @@ session_start();
                   <?php
                       include("connection.php");
                       include("database.php");
-                      $sql = "SELECT id,concat(uniqueid,id) as uniqueid,Institute,Type,Category,Status,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
+                      $sql = "SELECT id,concat(uniqueid,id) as uniqueid,Institute,Type,Category,Description,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
                       $result = $con->query($sql);
                       $value2 = "DELETE FROM indents";
                       $result3 = $conn->query($value2);
@@ -87,14 +86,13 @@ session_start();
                       }
 
                       while ($row = $result->fetch_assoc()) {
-                        $_SESSION['uniqueid'] = $row["uniqueid"];
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
-                          <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>
+                          <td><a href= 'description-indent.php'>" . $row["uniqueid"] . "</a></td>
+                          <?php " . $_SESSION['uniqueid'] . " = " . $row["uniqueid"] . "; ?>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>
-                          <td>" . $row["Status"] . "</td>
                           <td>" . $row["age"] . "</td>
                         </tr>";
                       }

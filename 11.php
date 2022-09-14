@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +29,7 @@
             <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
         </div>
         <div class="row">
-            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, srikantn</p>
+            <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo ($_SESSION['username']); ?></p>
         </div>
         <div class="row">
             <ul class="nav nav-tabs">
@@ -33,10 +37,10 @@
                   <a class="nav-link" href="8.php">ONGOING</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="10.html">COMPLETED</a>
+                  <a class="nav-link active" aria-current="page" href="10.php">COMPLETED</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="12.html">TO BE APPROVED BY ME</a>
+                  <a class="nav-link" href="12.php">TO BE APPROVED BY ME</a>
                 </li>
               </ul>
         </div>
@@ -54,7 +58,7 @@
                     <th scope="col">Institute</th>
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Approval Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -69,7 +73,6 @@
                   <tr>
                     <?php
                       include("connection.php");
-                      session_start();
                       $sql = "SELECT * FROM indentdb";
                       $result = $con->query($sql);
 
@@ -84,7 +87,6 @@
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>
-                          <td>" . $row["Status"] . "</td>
                           <td>approved</td>
                         </tr>";
                       }

@@ -54,13 +54,11 @@ session_start();
               </style> 
               <thead>
                   <tr style="background-color: #4472c4; color:white;">
-                    <th scope="col">S.No </th>
                     <th scope="col">ID </th>
                     <th scope="col">Institute</th>
                     <th scope="col">Type</th>
                     <th scope="col">Category</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Remarks</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -80,7 +78,7 @@ session_start();
                   <tr>
                     <?php
                       include("connection.php");
-                      $sql = "SELECT * FROM indentdb JOIN indents on indentdb.id = indents.ID";
+                      $sql = "SELECT indents.uniqueID as uniqueid, Institute,Type,Category,Description  FROM indentdb JOIN indents on indentdb.id = indents.ID where indents.uniqueID = '" . $_SESSION['uniqueid'] . "'";
                       $result = $con->query($sql);
 
                       if (!$result) {
@@ -89,8 +87,7 @@ session_start();
 
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                          <td>" . $row["id"] . "</td>
-                          <td><a href= '13.php'>" . $row["uniqueID"] . "</a></td>
+                          <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>

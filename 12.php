@@ -87,7 +87,6 @@ session_start();
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
                           <td>" . $row["uniqueid"] . "</td>
-                          <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>
                           <td>" . $row["age"] . "</td>

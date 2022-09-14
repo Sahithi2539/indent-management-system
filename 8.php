@@ -87,6 +87,7 @@ session_start();
                       }
 
                       while ($row = $result->fetch_assoc()) {
+                        $_SESSION['uniqueid'] = $row["uniqueid"];
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
                           <td><a href= '13.php'>" . $row["uniqueid"] . "</a></td>

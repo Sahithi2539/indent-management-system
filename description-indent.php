@@ -79,7 +79,7 @@ session_start();
                   <tr>
                     <?php
                       include("connection.php");
-                      $sql = "SELECT indents.uniqueID as uniqueid, Institute,Type,Category,Description  FROM indentdb JOIN indents on indentdb.id = indents.ID where indents.uniqueID = '" . $_SESSION['uniqueid'] . "'";
+                      $sql = "SELECT indents.uniqueID as uniqueid, Institute,Type,Category,Description  FROM indentdb JOIN indents on indentdb.id = indents.ID where indents.uniqueID = '" . $_GET["title"] . "'";
                       $result = $con->query($sql);
 
                       if (!$result) {

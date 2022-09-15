@@ -88,8 +88,7 @@ session_start();
                       while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                           <td>" . $row["id"] . "</td>
-                          <td><a href= 'description-indent.php'>" . $row["uniqueid"] . "</a></td>
-                          <?php " . $_SESSION['uniqueid'] . " = " . $row["uniqueid"] . "; ?>
+                          <td><a href='description-indent.php?title=" . $row['uniqueid'] . "'>" . $row["uniqueid"] . "</a></td>
                           <td>" . $row["Institute"] . "</td>
                           <td>" . $row["Type"] . "</td>
                           <td>" . $row["Category"] . "</td>

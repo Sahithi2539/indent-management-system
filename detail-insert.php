@@ -26,6 +26,8 @@ if(isset($_POST['submit'])){
               upper(concat(substring('$Institute',1,4),substring('$Type',1,1),substring('$Category',1,3)))
             )";
       $result = $conn->query($query);
+
+      $owner = "INSERT INTO owner SELECT concat(id,uniqueid) AS uniqueID FROM indentdb";
      
       if($result){
         $_SESSION['Block']=$Block;

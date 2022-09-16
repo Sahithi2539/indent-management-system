@@ -94,7 +94,7 @@ session_start();
                           <td>" . $row["Category"] . "</td>
                           <td>" . $row["Description"] . "</td>
                           <td>
-                          <button type='button' class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#exampleModal'>APPROVE</button>
+                          <a href='update.php?title=" . $_GET["title"] . "'><button type='button' class='btn btn-success btn-sm'> APPROVE </button></a>
                           <button type='button' class='btn btn-danger btn-sm'>DECLINE</button>
                           </td>
                         </tr>";

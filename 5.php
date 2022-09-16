@@ -23,6 +23,7 @@ include('detail-insert.php');
     $var1 = $_SESSION['Institute'];
     $var2 = $_SESSION['Category'];
     $var3 = $_SESSION['Type'];
+    $var4 = $_SESSION['username'];
     ?>
   <div class="container" style="margin: 100px auto;">
     <div class="row">
@@ -91,6 +92,7 @@ include('detail-insert.php');
     </div>
     <div class="row">
       <div class="col-md-12">
+        <input type="text" name="name" value="<?php  echo "$var4"?>">
         <button type="submit" name="submit" class="btn btn-primary align-text-bottom" style="margin-top: 50px; float:right;">SUBMIT</button>
       </div>
     </div>

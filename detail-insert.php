@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
   $Type=$_POST['Type'];
   $Category=$_POST['Category'];
   $Status = $_POST['Status'];
+  $name = $_POST['name'];
 
      if($Institute == "VVL DVD"){$Institute = "VVLDVD";}elseif($Institute =="VVL TMP"){$Institute= "VVLTMP";}else{$Institute = $Institute;}
      if(!empty($Block) && !empty($RoomNo ) && !empty($Department) && !empty($Description)){
@@ -27,7 +28,8 @@ if(isset($_POST['submit'])){
             )";
       $result = $conn->query($query);
 
-      $owner = "INSERT INTO owner SELECT concat(id,uniqueid) AS uniqueID FROM indentdb";
+      $owner = "INSERT INTO owner (uniqueID, name, Approval) SELECT concat(uniqueid,id),'$name','Not Approved' AS uniqueID FROM indentdb where id=";
+      $conn->query($owner);
      
       if($result){
         $_SESSION['Block']=$Block;

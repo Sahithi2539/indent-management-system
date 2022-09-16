@@ -28,7 +28,10 @@ if(isset($_POST['submit'])){
             )";
       $result = $conn->query($query);
 
-      $owner = "INSERT INTO owner (uniqueID, name, Approval) SELECT concat(uniqueid,id),'$name','Not Approved' AS uniqueID FROM indentdb where id=";
+      $value2 = "DELETE FROM owner";
+      $result3 = $conn->query($value2);
+
+      $owner = "INSERT INTO owner (uniqueID, name, Approval) SELECT concat(uniqueid,id) AS uniqueID,'$name','Not Approved' FROM indentdb";
       $conn->query($owner);
      
       if($result){

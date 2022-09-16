@@ -78,7 +78,7 @@ session_start();
                       $result = $con->query($sql);
                       $value2 = "DELETE FROM indents";
                       $result3 = $conn->query($value2);
-                      $value1 = "INSERT INTO indents SELECT id,concat(uniqueid,id) as uniqueid,DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
+                      $value1 = "INSERT INTO indents SELECT id,concat(uniqueid,id) as uniqueid, DATEDIFF(CURDATE(),subdate) as age FROM indentdb";
                       $result2 = $conn->query($value1);
 
                       if (!$result) {

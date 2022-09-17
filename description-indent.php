@@ -94,8 +94,8 @@ session_start();
                           <td>" . $row["Category"] . "</td>
                           <td>" . $row["Description"] . "</td>
                           <td>
-                          <a href='update.php?title=" . $_GET["title"] . "'><button type='button' class='btn btn-success btn-sm'> APPROVE </button></a>
-                          <button type='button' class='btn btn-danger btn-sm'>DECLINE</button>
+                          <a href='update.php?title=" . $_GET["title"] . "'><button type='button' class='btn btn-success btn-sm'>APPROVE</button></a>
+                          <a href='delete.php?title=" . $_GET["title"] . "'><button type='button' class='btn btn-danger btn-sm'>DECLINE</button></a>
                           </td>
                         </tr>";
                       }

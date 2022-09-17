@@ -92,7 +92,7 @@ include('detail-insert.php');
     </div>
     <div class="row">
       <div class="col-md-12">
-        <input type="text" name="name" value="<?php  echo "$var4"?>">
+      <input type="text" name="name" value="<?php  echo "$var4"?>">
         <button type="submit" name="submit" class="btn btn-primary align-text-bottom" style="margin-top: 50px; float:right;">SUBMIT</button>
       </div>
     </div>

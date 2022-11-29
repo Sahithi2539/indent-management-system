@@ -2,7 +2,7 @@
 $hostName = "localhost";
 $userName = "root";
 $password = "";
-$databaseName = "javatpoint";
+$databaseName = "mis";
 
  $conn = new mysqli($hostName, $userName, $password, $databaseName);
 // Check connection

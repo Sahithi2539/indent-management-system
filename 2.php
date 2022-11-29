@@ -17,7 +17,7 @@ session_start();
 <body>
     <div class="container" style="margin: 100px auto;">
         <div class="row">
-            <p class="headingparagraph text-center centertext">EMPLOYEE MANAGEMENT SYSTEM</p>
+            <p class="headingparagraph text-center centertext">MANAGEMENT INFORMATION SYSTEM</p>
         </div>
         <div class="row">
             <p class="text-end" style="font-size: larger; font-weight: bold;">Welcome, <?php echo($_SESSION['username'] ); ?></p>
@@ -25,14 +25,19 @@ session_start();
         <div class="row">
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" class="btn btn-primary homebtn">PROFILE</button></div>
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="submit" onclick="window.location.href='3.php';" class="btn btn-primary homebtn" >INDENTS</a></button></div>
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" class="btn btn-primary homebtn">PAYROLL</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='0.html';" class="btn btn-primary homebtn">B.TECH</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="submit" onclick="window.location.href='mtech.php';" class="btn btn-primary homebtn" >M.TECH</a></button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='5.html';" class="btn btn-primary homebtn">MBA</button></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" class="btn btn-primary homebtn">GRIEVANCES</button></div>
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" class="btn btn-primary homebtn">360 FEEDBACK</button></div>
-                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" class="btn btn-primary homebtn">ATTENDANCE</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='7.html';" class="btn btn-primary homebtn">MCA</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='9.html';" class="btn btn-primary homebtn">OLD DUES(FROM STUDENTS)</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='11.html';" class="btn btn-primary homebtn">PRIOR TO 2020-21</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='13.html';"class="btn btn-primary homebtn">CASH DETAILS</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='15.html';"class="btn btn-primary homebtn">CASH PAYMENTS</button></div>
+                    <div class="col-md-4" style="height: 150px; margin: 20px 0;"><button type="button" onclick="window.location.href='17.html';"class="btn btn-primary homebtn">JVD Details</button></div>
                 </div>
             </div>
         </div>

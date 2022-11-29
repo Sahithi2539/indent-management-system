@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function add(){
+            var var1,var2,var3,var4,var5,var6,var7,var8;
+            var1 = parseInt(document.getElementById("var1").value);
+            var2 = parseInt(document.getElementById("var2").value);
+            var3 = parseInt(document.getElementById("var3").value);
+            var4 = parseInt(document.getElementById("var4").value);
+            var5 = parseInt(document.getElementById("var5").value);
+            var6 = parseInt(document.getElementById("var6").value);
+            var7 = parseInt(document.getElementById("var7").value);
+            var8 = parseInt(document.getElementById("var8").value);
+
+            sum1 = var1+var5;
+            sum2 = var2+var6;
+            sum3 = var3+var7;
+            sum4 = var4+var8;
+            sum5 = var2+var3+var4;
+            sum6 = var6+var7+var8;
+            sum7 = var2+var3+var4+var6+var7+var8;
+
+            document.getElementById("var1+var5").innerHTML = sum1;
+            document.getElementById("var2+var6").innerHTML = sum2;
+            document.getElementById("var3+var7").innerHTML = sum3;
+            document.getElementById("var4+var8").innerHTML = sum4;
+            document.getElementById("var2+var3+var4").innerHTML = sum5;
+            document.getElementById("var6+var7+var8").innerHTML = sum6;
+            document.getElementById("var2+var3+var4+var6+var7+var8").innerHTML=sum7;
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="margin: 100px auto;">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="2.php">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">ENTRY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="4.html">RECORDS</a>
+            </li>
+          </ul>
+    </div>
+</div>
+    <div class="col-md-4">
+        <table id="myTable" class="table table-striped table-bordered table-hover text-center" style="margin-top: 100px; margin-left:30%; padding: 15px 0px 0px 0px;">
+            <thead>
+                <tr style="background-color: #4472c4; color:white;">
+                    <th scope="col" colspan="6">OLD DUES FROM STUDENT</th>
+                </tr>
+                <tr style="background-color: white;">
+                    <th scope="col">Course</th>
+                    <th scope="col">2021-2022</th>
+                    <th scope="col">2020-2021</th>
+                    <th scope="col">2019-2020</th>
+                    <th scope="col">Prior to 19-20</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                    <td>B Tech</td>
+                    <td><input type="text" id="var1" /></td>
+                    <td><input type="text" id="var2" /></td>
+                    <td><input type="text" id="var3" /></td>
+                    <td><input type="text" id="var4" /></td>
+                    <td><p><span id="var2+var3+var4" style="display: block;"></span></p></td>  
+                </tr>
+                <tr scope="row">
+                    <td>M Tech</td> 
+                    <td><input type="text" id="var5" /></td>
+                    <td><input type="text" id="var6" /></td>
+                    <td><input type="text" id="var7" /></td>
+                    <td><input type="text" id="var8" /></td>
+                    <td><p><span id="var6+var7+var8" style="display: block;"></span></p></td> 
+                </tr>
+                <tr scope="row">
+                    <td>MBA</td>
+                    <td><input type="text" id="var1" /></td>
+                    <td><input type="text" id="var2" /></td>
+                    <td><input type="text" id="var3" /></td>
+                    <td><input type="text" id="var4" /></td>
+                    <td><p><span id="var2+var3+var4" style="display: block;"></span></p></td>  
+                </tr>
+                <tr scope="row">
+                    <td>MCA</td> 
+                    <td><input type="text" id="var5" /></td>
+                    <td><input type="text" id="var6" /></td>
+                    <td><input type="text" id="var7" /></td>
+                    <td><input type="text" id="var8" /></td>
+                    <td><p><span id="var6+var7+var8" style="display: block;"></span></p></td> 
+                </tr>
+                <tr scope="row">
+                    <td>Sub Total</td> 
+                    <td id="var1+var5"><p><span id="var1+var5" style="display: block;"></span></p></td> 
+                    <td id="var2+var6"><p><span id="var2+var6" style="display: block;"></span></p></td>
+                    <td id="var3+var7"><p><span id="var3+var7" style="display: block;"></span></p></td> 
+                    <td id="var4+var8"><p><span id="var4+var8" style="display: block;"></span></p></td>
+                    <td><p><span id="var2+var3+var4+var6+var7+var8" style="display: block;"></span></p></td> 
+                </tr>
+            </tbody>
+        </table>
+                <button type="submit" name="submit" class="btn btn-primary align-text-bottom action_btn" style="margin-top: 50px; margin-left: 1000px;" onclick="add()">Total</button>
+                <!-- <button class="btn btn-success align-text-bottom action_btn"><a type="button" href="4.html" name="log" id="log" value="Next">Next</a></button> -->
+            
+        <!-- <button href="" name="log" id="log" value="Total" onclick ="add()">Total</button> -->
+        <!-- <button type="submit" name="submit" class="btn btn-primary align-text-bottom" style="margin-top: 50px; margin-left: 1000px;" onclick="add()">Total</button>
+        <button class="btn btn-success align-text-bottom" style="margin-top: 50px;"><a type="button" href="4.php" name="log" id="log" value="Next">Next</a></button> -->
+    </div>
+</body>
+</html>
